@@ -1,6 +1,10 @@
-![logo](assets/images/bluebrickslogo-128.png) 
-# Blue Bricks: Real-Time Sentiment & Anomaly Intelligence on Databricks
- 
+<table>
+  <tr>
+    <td><img src="assets/images/bluebrickslogo-128.png" width="128" alt="Logo"></td>
+    <td><h1 style="margin: 0;">Blue Bricks: Real-Time Sentiment & Anomaly Intelligence on Databricks</h1></td>
+  </tr>
+</table>
+
 ## Overview
 Team Blue Bricks has built an advanced AI/BI solution on the Databricks Lakehouse Platform, transforming customer interactions into real-time, actionable intelligence. This platform continuously analyses sentiment signals, uncovers hidden customer distress, and enables rapid, proactive resolutions. Leveraging unified data analytics, Delta Lake's robust reliability, and Databricks' auto-scaling capabilities, our solution provides uninterrupted visibility into sentiment anomalies—empowering businesses to identify and address customer service risks before minor concerns escalate.
  
