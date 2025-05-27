@@ -1,4 +1,3 @@
-
 ![logo](assets/images/bluebrickslogo-128.png) 
 # Blue Bricks: Real-Time Sentiment & Anomaly Intelligence on Databricks
  
