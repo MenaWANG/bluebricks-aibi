@@ -12,7 +12,7 @@ Team Blue Bricks has built an advanced AI/BI solution on the Databricks Lakehous
 
 Watch our complete AI/BI solution demonstration, showcasing the real-time sentiment analysis, anomaly detection dashboard, and AI-powered insights in action:
 
-<a href="https://youtu.be/uxGiv2UHe30?si=4FFSl6ft38YZr4xM">
+<a href="https://youtu.be/II3t-f_l8Ig?si=AXBkKPbrBwRiKKXO" target="_blank">
   <img src="assets/images/aibi-screenshot.jpeg" alt="Blue Bricks Demo - Real-Time Sentiment & Anomaly Intelligence" width="640" style="max-width: 100%;">
 </a>
 
