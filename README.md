@@ -34,7 +34,12 @@ Powered by Databricks SQL, our AI/BI Dashboard presents intuitive, interactive v
  
 **Genie Natural-Language Interface**  
 Integrated into Databricks' Genie Spaces, our AI-powered natural-language assistant allows operational specialists to query sentiment data effortlessly. Questions such as "Show recent sentiment anomalies" or "List affected service IDs" yield precise, instant answers, enabling swift action and operational agility.
- 
+
+**MLflow Model Lifecycle Management**   
+To further enhance reproducibility and streamline deployment, this project includes an exploratory branch leveraging MLflow for automated model versioning, registry integration, and lifecycle tracking.
+This implementation is captured in the [mlflow-implementation branch](https://github.com/MenaWANG/bluebricks-aibi/tree/mlflow-implementation) as a forward-looking extension toward production-grade deployment practices.
+
+
 ## Impacts & Benefits  
 **Risk Mitigation**  
 Rapid detection of sentiment anomalies quickly surfaces underlying process gaps, training issues, or miscommunications. Organisations can address these proactively, preventing small issues from developing into major crises.
