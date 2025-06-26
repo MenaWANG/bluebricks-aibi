@@ -168,14 +168,25 @@ class SentimentAnalyzer:
 
 def create_model_serving_endpoint():
     """
-    Create a model serving endpoint for the sentiment analysis model
-    Note: This requires Databricks Model Serving to be enabled
+    Create or update a model serving endpoint for the sentiment analysis model.
+    Note: This requires Databricks Model Serving to be enabled.
+    This function is idempotent: it will check if the endpoint exists and skip creation if so.
     """
     try:
         from databricks.sdk import WorkspaceClient
-        
+        from databricks.sdk.errors import NotFound
+
         w = WorkspaceClient()
-        
+
+        # Check if the endpoint already exists
+        try:
+            w.serving_endpoints.get(name=config.MODEL_SERVING_ENDPOINT_NAME)
+            logger.info(f"Endpoint '{config.MODEL_SERVING_ENDPOINT_NAME}' already exists. Skipping creation.")
+            # If it exists, you might want to update it to the latest version, but for now we'll just return.
+            return w.serving_endpoints.get(name=config.MODEL_SERVING_ENDPOINT_NAME)
+        except NotFound:
+            logger.info(f"Endpoint '{config.MODEL_SERVING_ENDPOINT_NAME}' not found. A new one will be created.")
+
         # Get the latest model version
         analyzer = SentimentAnalyzer()
         latest_version = analyzer.get_latest_model_version()
@@ -209,7 +220,7 @@ def create_model_serving_endpoint():
         return endpoint
         
     except Exception as e:
-        logger.error(f"Error creating model serving endpoint: {e}")
+        logger.error(f"Error creating or updating model serving endpoint: {e}")
         logger.info("You can create the endpoint manually through the Databricks UI")
         return None
 
